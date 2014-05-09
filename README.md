@@ -12,6 +12,12 @@ And then execute:
 
     $ bundle
 
+TODO: Run migration to add columns to users
+
+TODO: Add your Mailchimp api keys
+
+    MAILCHIMP_API_KEY=
+
 Or install it yourself as:
 
     $ gem install chimpy
