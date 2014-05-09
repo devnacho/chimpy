@@ -26,7 +26,5 @@ describe Chimpy::Base do
     users_to_sync = Chimpy::Base.users_to_sync
     users_to_sync.include?(@synced).must_equal false
   end
-
-
 end
 
