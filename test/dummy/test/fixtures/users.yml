@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  chimpy_synced_at: 2014-05-09 14:01:16
+  chimpy_mc_id: 1
+
+two:
+  email: MyString
+  chimpy_synced_at: 2014-05-09 14:01:16
+  chimpy_mc_id: 1

@@ -1,5 +1,9 @@
 require "chimpy/version"
 
 module Chimpy
-  # Your code goes here...
+  class Base
+    def self.hello
+      "Hello"
+    end
+  end
 end
