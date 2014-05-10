@@ -1,27 +1,4 @@
-require "minitest/spec"
-require "minitest/autorun"
-require "minitest/pride"
 require 'test_helper'
-require 'dotenv'
-require 'vcr'
-require 'database_cleaner'
-require 'chimpy'
-Dotenv.load
-
-VCR.configure do |c|
-  c.cassette_library_dir = 'fixtures/vcr_cassettes'
-  c.hook_into :webmock
-end
-
-class MiniTest::Spec
-  before :each do
-    DatabaseCleaner.start
-  end
-
-  after :each do
-    DatabaseCleaner.clean
-  end
-end
 
 describe Chimpy::Base do
   describe "users" do
