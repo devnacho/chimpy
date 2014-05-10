@@ -1,9 +1,9 @@
 module Chimpy
   class Configuration
-    attr_accessor :model_to_sync
+    attr_accessor :sync_class
 
     def initialize
-      @model_to_sync = 'User'
+      @sync_class = User
     end
   end
 end

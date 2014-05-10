@@ -4,7 +4,7 @@ describe Chimpy::Base do
 
   before do
     Chimpy.configure do |config|
-      config.model_to_sync = 'User'
+      config.sync_class = User
     end
   end
 
@@ -29,7 +29,6 @@ describe Chimpy::Base do
     it "leaves the already synced user untouched" do
       @already_synced.chimpy_synced_at.must_equal  @already_synced.reload.chimpy_synced_at
     end
-
   end
 
   describe "users" do
