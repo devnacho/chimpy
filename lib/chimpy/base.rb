@@ -35,7 +35,7 @@ module Chimpy
       end
 
       response["updates"].each do |update|
-        user = Object.const_get(@sync_model).find_by_email(add["email"])
+        user = Object.const_get(@sync_model).find_by_email(update["email"])
         user.update(chimpy_synced_at: Time.now)
         synced_users << user
       end

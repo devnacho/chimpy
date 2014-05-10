@@ -1,0 +1,34 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://us8.api.mailchimp.com/2.0/lists/batch-subscribe
+    body:
+      encoding: UTF-8
+      string: '{"apikey":"549391d6ed3fc64fd42e4b5cf83ceba9-us8","id":"788e29440b","batch":[{"email":{"email":"david.gilmour@gmail.com"}},{"email":{"email":"nick.mason@gmail.com"}}],"update_existing":true,"double_optin":false}'
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '229'
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Sat, 10 May 2014 23:03:46 GMT
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - _AVESTA_ENVIRONMENT=prod; path=/
+    body:
+      encoding: UTF-8
+      string: '{"add_count":2,"adds":[{"email":"david.gilmour@gmail.com","euid":"0a80c3e59f","leid":"151471181"},{"email":"nick.mason@gmail.com","euid":"678343bc63","leid":"151471185"}],"update_count":0,"updates":[],"error_count":0,"errors":[]}'
+    http_version: 
+  recorded_at: Sat, 10 May 2014 23:03:44 GMT
+recorded_with: VCR 2.8.0

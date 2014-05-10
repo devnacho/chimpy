@@ -5112,3 +5112,1133 @@ SQLite3::SQLException: no such column: iavisos_last_updated_at: SELECT "users".*
   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 22:57:46.685951"], ["email", "johnjohnson@gmail.com"], ["updated_at", "2014-05-10 22:57:46.685951"]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 22:57:46.691588"], ["created_at", "2014-05-10 22:57:46.693913"], ["email", "donjohnson@gmail.com"], ["updated_at", "2014-05-07 22:57:46.692232"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'johndonson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 22:57:46.695153"], ["created_at", "2014-05-10 22:57:46.696412"], ["email", "johndonson@gmail.com"], ["updated_at", "2014-05-09 22:57:46.695333"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 22:57:46.758791"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 22:57:46.758791"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 22:57:46.759826"], ["created_at", "2014-05-10 22:57:46.761017"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 22:57:46.759931"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 22:57:46.762193"], ["created_at", "2014-05-10 22:57:46.763352"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 22:57:46.762331"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 22:57:46.766965"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 22:57:46.766965"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 22:57:46.767923"], ["created_at", "2014-05-10 22:57:46.769229"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 22:57:46.768027"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 22:57:46.770065"], ["created_at", "2014-05-10 22:57:46.771092"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 22:57:46.770162"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 22:57:46.774263"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 22:57:46.774263"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 22:57:46.775009"], ["created_at", "2014-05-10 22:57:46.775834"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 22:57:46.775091"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 22:57:46.776512"], ["created_at", "2014-05-10 22:57:46.777622"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 22:57:46.776632"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 22:57:46.781815"], ["email", "johnjohnson@gmail.com"], ["updated_at", "2014-05-10 22:57:46.781815"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 22:57:46.783093"], ["email", "donjohnson@gmail.com"], ["updated_at", "2014-05-10 22:57:46.783093"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'johnjohnson@gmail.com' AND "users"."id" != 424) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424[0m  [["chimpy_synced_at", "2014-05-10 22:57:46.817059"], ["updated_at", "2014-05-10 22:57:46.818598"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'donjohnson@gmail.com' AND "users"."id" != 425) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 425  [["chimpy_synced_at", "2014-05-10 22:57:46.821237"], ["updated_at", "2014-05-10 22:57:46.822401"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 424]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 425]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 22:57:46.827887"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 22:57:46.827887"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 22:57:46.829040"], ["created_at", "2014-05-10 22:57:46.830020"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 22:57:46.829140"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 22:57:46.830658"], ["created_at", "2014-05-10 22:57:46.831466"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 22:57:46.830730"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 22:57:46.834508"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 22:57:46.834508"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 22:57:46.835273"], ["created_at", "2014-05-10 22:57:46.836018"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 22:57:46.835354"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 22:57:46.837781"], ["created_at", "2014-05-10 22:57:46.839028"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 22:57:46.837878"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 22:57:46.842618"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 22:57:46.842618"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 22:57:46.843505"], ["created_at", "2014-05-10 22:57:46.844773"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 22:57:46.843677"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 22:57:46.845496"], ["created_at", "2014-05-10 22:57:46.846311"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 22:57:46.845577"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 22:57:46.849835"], ["email", "johnjohnson@gmail.com"], ["updated_at", "2014-05-10 22:57:46.849835"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 22:57:46.851097"], ["email", "donjohnson@gmail.com"], ["updated_at", "2014-05-10 22:57:46.851097"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'johnjohnson@gmail.com' AND "users"."id" != 424) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424[0m  [["chimpy_synced_at", "2014-05-10 22:57:46.877460"], ["updated_at", "2014-05-10 22:57:46.878465"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'donjohnson@gmail.com' AND "users"."id" != 425) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 425  [["chimpy_synced_at", "2014-05-10 22:57:46.879476"], ["updated_at", "2014-05-10 22:57:46.880071"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 424]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 425]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'david.gilmour@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:01:34.614767"], ["email", "david.gilmour@gmail.com"], ["updated_at", "2014-05-10 23:01:34.614767"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'roger.waters@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:01:34.619372"], ["created_at", "2014-05-10 23:01:34.620711"], ["email", "roger.waters@gmail.com"], ["updated_at", "2014-05-07 23:01:34.619599"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'nick.mason@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:01:34.621526"], ["created_at", "2014-05-10 23:01:34.622502"], ["email", "nick.mason@gmail.com"], ["updated_at", "2014-05-09 23:01:34.621641"]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:01:37.437314"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:01:37.437314"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:01:37.438307"], ["created_at", "2014-05-10 23:01:37.439265"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:01:37.438442"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:01:37.439925"], ["created_at", "2014-05-10 23:01:37.440770"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:01:37.440002"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:01:37.444165"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:01:37.444165"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:01:37.444898"], ["created_at", "2014-05-10 23:01:37.446089"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:01:37.445038"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:01:37.447415"], ["created_at", "2014-05-10 23:01:37.448765"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:01:37.447561"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:01:37.454143"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:01:37.454143"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:01:37.455446"], ["created_at", "2014-05-10 23:01:37.456714"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:01:37.455575"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:01:37.457615"], ["created_at", "2014-05-10 23:01:37.458700"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:01:37.457751"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:01:37.463524"], ["email", "johnjohnson@gmail.com"], ["updated_at", "2014-05-10 23:01:37.463524"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:01:37.465016"], ["email", "donjohnson@gmail.com"], ["updated_at", "2014-05-10 23:01:37.465016"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'johnjohnson@gmail.com' AND "users"."id" != 424) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424[0m  [["chimpy_synced_at", "2014-05-10 23:01:37.493134"], ["updated_at", "2014-05-10 23:01:37.494726"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'donjohnson@gmail.com' AND "users"."id" != 425) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 425  [["chimpy_synced_at", "2014-05-10 23:01:37.496793"], ["updated_at", "2014-05-10 23:01:37.497470"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 424]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 425]]
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:01:37.503476"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:01:37.503476"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:01:37.504729"], ["created_at", "2014-05-10 23:01:37.505888"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:01:37.504884"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:01:37.506741"], ["created_at", "2014-05-10 23:01:37.507844"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:01:37.506839"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:01:37.511835"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:01:37.511835"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:01:37.512693"], ["created_at", "2014-05-10 23:01:37.513632"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:01:37.512786"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:01:37.514351"], ["created_at", "2014-05-10 23:01:37.515157"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:01:37.514429"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:01:37.518420"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:01:37.518420"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:01:37.519306"], ["created_at", "2014-05-10 23:01:37.520261"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:01:37.519400"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:01:37.520912"], ["created_at", "2014-05-10 23:01:37.522048"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:01:37.520997"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:01:37.525784"], ["email", "johnjohnson@gmail.com"], ["updated_at", "2014-05-10 23:01:37.525784"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:01:37.527030"], ["email", "donjohnson@gmail.com"], ["updated_at", "2014-05-10 23:01:37.527030"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'johnjohnson@gmail.com' AND "users"."id" != 424) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424[0m  [["chimpy_synced_at", "2014-05-10 23:01:37.559387"], ["updated_at", "2014-05-10 23:01:37.560148"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'donjohnson@gmail.com' AND "users"."id" != 425) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 425  [["chimpy_synced_at", "2014-05-10 23:01:37.561070"], ["updated_at", "2014-05-10 23:01:37.561614"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 424]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 425]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'david.gilmour@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:03:28.392279"], ["email", "david.gilmour@gmail.com"], ["updated_at", "2014-05-10 23:03:28.392279"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'roger.waters@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:03:28.398057"], ["created_at", "2014-05-10 23:03:28.400065"], ["email", "roger.waters@gmail.com"], ["updated_at", "2014-05-07 23:03:28.398406"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'nick.mason@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:03:28.401299"], ["created_at", "2014-05-10 23:03:28.402318"], ["email", "nick.mason@gmail.com"], ["updated_at", "2014-05-09 23:03:28.401403"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:03:28.444481"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:03:28.444481"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:03:28.445327"], ["created_at", "2014-05-10 23:03:28.446141"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:03:28.445442"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:03:28.446688"], ["created_at", "2014-05-10 23:03:28.447658"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:03:28.446758"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:03:28.451370"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:03:28.451370"]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:03:28.452320"], ["created_at", "2014-05-10 23:03:28.453936"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:03:28.452412"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:03:28.454846"], ["created_at", "2014-05-10 23:03:28.455768"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:03:28.454928"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:03:28.459305"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:03:28.459305"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:03:28.460102"], ["created_at", "2014-05-10 23:03:28.460857"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:03:28.460181"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:03:28.461389"], ["created_at", "2014-05-10 23:03:28.462247"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:03:28.461453"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:03:28.466322"], ["email", "johnjohnson@gmail.com"], ["updated_at", "2014-05-10 23:03:28.466322"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:03:28.468359"], ["email", "donjohnson@gmail.com"], ["updated_at", "2014-05-10 23:03:28.468359"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'johnjohnson@gmail.com' AND "users"."id" != 424) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424[0m  [["chimpy_synced_at", "2014-05-10 23:03:28.498795"], ["updated_at", "2014-05-10 23:03:28.500717"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'donjohnson@gmail.com' AND "users"."id" != 425) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 425  [["chimpy_synced_at", "2014-05-10 23:03:28.502901"], ["updated_at", "2014-05-10 23:03:28.503652"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 424]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 425]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:03:28.508456"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:03:28.508456"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:03:28.509384"], ["created_at", "2014-05-10 23:03:28.510202"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:03:28.509467"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:03:28.510766"], ["created_at", "2014-05-10 23:03:28.511580"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:03:28.510836"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:03:28.515233"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:03:28.515233"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:03:28.516285"], ["created_at", "2014-05-10 23:03:28.517582"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:03:28.516491"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:03:28.518186"], ["created_at", "2014-05-10 23:03:28.518914"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:03:28.518257"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:03:28.522117"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:03:28.522117"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:03:28.522985"], ["created_at", "2014-05-10 23:03:28.523765"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:03:28.523071"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:03:28.524344"], ["created_at", "2014-05-10 23:03:28.525217"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:03:28.524408"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:03:28.529466"], ["email", "johnjohnson@gmail.com"], ["updated_at", "2014-05-10 23:03:28.529466"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:03:28.530830"], ["email", "donjohnson@gmail.com"], ["updated_at", "2014-05-10 23:03:28.530830"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'johnjohnson@gmail.com' AND "users"."id" != 424) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424[0m  [["chimpy_synced_at", "2014-05-10 23:03:28.556148"], ["updated_at", "2014-05-10 23:03:28.556956"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'donjohnson@gmail.com' AND "users"."id" != 425) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 425  [["chimpy_synced_at", "2014-05-10 23:03:28.557962"], ["updated_at", "2014-05-10 23:03:28.558562"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 424]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 425]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'david.gilmour@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:03:43.416502"], ["email", "david.gilmour@gmail.com"], ["updated_at", "2014-05-10 23:03:43.416502"]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'roger.waters@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:03:43.421351"], ["created_at", "2014-05-10 23:03:43.423010"], ["email", "roger.waters@gmail.com"], ["updated_at", "2014-05-07 23:03:43.421608"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'nick.mason@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:03:43.424329"], ["created_at", "2014-05-10 23:03:43.425694"], ["email", "nick.mason@gmail.com"], ["updated_at", "2014-05-09 23:03:43.424451"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'david.gilmour@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'david.gilmour@gmail.com' AND "users"."id" != 424) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424[0m  [["chimpy_synced_at", "2014-05-10 23:03:44.856758"], ["updated_at", "2014-05-10 23:03:44.858398"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'nick.mason@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'nick.mason@gmail.com' AND "users"."id" != 426) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 426  [["chimpy_synced_at", "2014-05-10 23:03:44.860279"], ["updated_at", "2014-05-10 23:03:44.861154"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 424]]
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:03:44.869535"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:03:44.869535"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-05 23:03:44.870563"], ["created_at", "2014-05-10 23:03:44.871545"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:03:44.870737"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-09 23:03:44.872117"], ["created_at", "2014-05-10 23:03:44.872905"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:03:44.872179"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:03:44.876282"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:03:44.876282"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-05 23:03:44.877227"], ["created_at", "2014-05-10 23:03:44.878473"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:03:44.877408"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-09 23:03:44.879084"], ["created_at", "2014-05-10 23:03:44.879790"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:03:44.879153"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:03:44.883037"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:03:44.883037"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-05 23:03:44.883811"], ["created_at", "2014-05-10 23:03:44.884592"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:03:44.883890"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-09 23:03:44.885347"], ["created_at", "2014-05-10 23:03:44.886114"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:03:44.885423"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:03:44.890015"], ["email", "johnjohnson@gmail.com"], ["updated_at", "2014-05-10 23:03:44.890015"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:03:44.891286"], ["email", "donjohnson@gmail.com"], ["updated_at", "2014-05-10 23:03:44.891286"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'johnjohnson@gmail.com' AND "users"."id" != 424) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424  [["chimpy_synced_at", "2014-05-10 23:03:44.916543"], ["updated_at", "2014-05-10 23:03:44.917323"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'donjohnson@gmail.com' AND "users"."id" != 425) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 425[0m  [["chimpy_synced_at", "2014-05-10 23:03:44.918444"], ["updated_at", "2014-05-10 23:03:44.919026"]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 424]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 425]]
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:03:44.923574"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:03:44.923574"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-05 23:03:44.924366"], ["created_at", "2014-05-10 23:03:44.925323"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:03:44.924506"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-09 23:03:44.926030"], ["created_at", "2014-05-10 23:03:44.926887"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:03:44.926107"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:03:44.930046"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:03:44.930046"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-05 23:03:44.930814"], ["created_at", "2014-05-10 23:03:44.931555"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:03:44.930893"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-09 23:03:44.932372"], ["created_at", "2014-05-10 23:03:44.933341"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:03:44.932494"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:03:44.936348"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:03:44.936348"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-05 23:03:44.937208"], ["created_at", "2014-05-10 23:03:44.938005"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:03:44.937302"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-09 23:03:44.938521"], ["created_at", "2014-05-10 23:03:44.939192"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:03:44.938582"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:03:44.942797"], ["email", "johnjohnson@gmail.com"], ["updated_at", "2014-05-10 23:03:44.942797"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:03:44.944291"], ["email", "donjohnson@gmail.com"], ["updated_at", "2014-05-10 23:03:44.944291"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'johnjohnson@gmail.com' AND "users"."id" != 424) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424  [["chimpy_synced_at", "2014-05-10 23:03:44.967531"], ["updated_at", "2014-05-10 23:03:44.968292"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'donjohnson@gmail.com' AND "users"."id" != 425) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 425[0m  [["chimpy_synced_at", "2014-05-10 23:03:44.969288"], ["updated_at", "2014-05-10 23:03:44.970017"]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 424]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 425]]
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'david.gilmour@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:38.070596"], ["email", "david.gilmour@gmail.com"], ["updated_at", "2014-05-10 23:07:38.070596"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'roger.waters@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:07:38.076301"], ["created_at", "2014-05-10 23:07:38.078065"], ["email", "roger.waters@gmail.com"], ["updated_at", "2014-05-07 23:07:38.076577"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'nick.mason@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:07:38.079153"], ["created_at", "2014-05-10 23:07:38.080494"], ["email", "nick.mason@gmail.com"], ["updated_at", "2014-05-09 23:07:38.079317"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'david.gilmour@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'david.gilmour@gmail.com' AND "users"."id" != 424) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424[0m  [["chimpy_synced_at", "2014-05-10 23:07:38.120242"], ["updated_at", "2014-05-10 23:07:38.121860"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'nick.mason@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'nick.mason@gmail.com' AND "users"."id" != 426) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 426  [["chimpy_synced_at", "2014-05-10 23:07:38.123761"], ["updated_at", "2014-05-10 23:07:38.124533"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 426]]
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'david.gilmour@gmail.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:07:38.127496"], ["email", "david.gilmour@gmail.com"], ["updated_at", "2014-05-10 23:07:38.127496"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'roger.waters@gmail.com' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-09 23:07:38.128263"], ["created_at", "2014-05-10 23:07:38.129021"], ["email", "roger.waters@gmail.com"], ["updated_at", "2014-05-07 23:07:38.128346"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'nick.mason@gmail.com' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-05 23:07:38.129558"], ["created_at", "2014-05-10 23:07:38.130254"], ["email", "nick.mason@gmail.com"], ["updated_at", "2014-05-09 23:07:38.129618"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'david.gilmour@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'david.gilmour@gmail.com' AND "users"."id" != 424) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424  [["chimpy_synced_at", "2014-05-10 23:07:38.163806"], ["updated_at", "2014-05-10 23:07:38.164494"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'nick.mason@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'nick.mason@gmail.com' AND "users"."id" != 426) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 426[0m  [["chimpy_synced_at", "2014-05-10 23:07:38.165397"], ["updated_at", "2014-05-10 23:07:38.166161"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 424]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:38.170231"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:07:38.170231"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:07:38.171198"], ["created_at", "2014-05-10 23:07:38.172124"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:07:38.171287"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:07:38.172732"], ["created_at", "2014-05-10 23:07:38.173476"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:07:38.172802"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:38.176775"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:07:38.176775"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:07:38.177485"], ["created_at", "2014-05-10 23:07:38.178232"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:07:38.177558"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:07:38.179454"], ["created_at", "2014-05-10 23:07:38.180390"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:07:38.179585"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:38.183486"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:07:38.183486"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:07:38.184200"], ["created_at", "2014-05-10 23:07:38.185236"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:07:38.184274"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:07:38.185818"], ["created_at", "2014-05-10 23:07:38.186586"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:07:38.185887"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:38.190157"], ["email", "johnjohnson@gmail.com"], ["updated_at", "2014-05-10 23:07:38.190157"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:38.192419"], ["email", "donjohnson@gmail.com"], ["updated_at", "2014-05-10 23:07:38.192419"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'johnjohnson@gmail.com' AND "users"."id" != 424) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424[0m  [["chimpy_synced_at", "2014-05-10 23:07:38.221313"], ["updated_at", "2014-05-10 23:07:38.221999"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'donjohnson@gmail.com' AND "users"."id" != 425) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 425  [["chimpy_synced_at", "2014-05-10 23:07:38.222909"], ["updated_at", "2014-05-10 23:07:38.223515"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 424]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 425]]
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:38.229400"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:07:38.229400"]]
+  [1m[36mUser Exists (5.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:07:38.230621"], ["created_at", "2014-05-10 23:07:38.237760"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:07:38.230751"]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:07:38.239057"], ["created_at", "2014-05-10 23:07:38.240587"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:07:38.239193"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:38.245104"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:07:38.245104"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:07:38.245962"], ["created_at", "2014-05-10 23:07:38.246911"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:07:38.246049"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:07:38.247655"], ["created_at", "2014-05-10 23:07:38.248666"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:07:38.247747"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:38.252694"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:07:38.252694"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:07:38.254104"], ["created_at", "2014-05-10 23:07:38.255667"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:07:38.254236"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:07:38.256689"], ["created_at", "2014-05-10 23:07:38.257978"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:07:38.256792"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:38.262730"], ["email", "johnjohnson@gmail.com"], ["updated_at", "2014-05-10 23:07:38.262730"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:38.264148"], ["email", "donjohnson@gmail.com"], ["updated_at", "2014-05-10 23:07:38.264148"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'johnjohnson@gmail.com' AND "users"."id" != 424) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424[0m  [["chimpy_synced_at", "2014-05-10 23:07:38.295566"], ["updated_at", "2014-05-10 23:07:38.296885"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'donjohnson@gmail.com' AND "users"."id" != 425) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 425  [["chimpy_synced_at", "2014-05-10 23:07:38.298598"], ["updated_at", "2014-05-10 23:07:38.299583"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 424]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 425]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'david.gilmour@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:45.366528"], ["email", "david.gilmour@gmail.com"], ["updated_at", "2014-05-10 23:07:45.366528"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'roger.waters@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:07:45.371758"], ["created_at", "2014-05-10 23:07:45.373272"], ["email", "roger.waters@gmail.com"], ["updated_at", "2014-05-07 23:07:45.372010"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'nick.mason@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:07:45.374079"], ["created_at", "2014-05-10 23:07:45.375074"], ["email", "nick.mason@gmail.com"], ["updated_at", "2014-05-09 23:07:45.374199"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'david.gilmour@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'david.gilmour@gmail.com' AND "users"."id" != 424) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424[0m  [["chimpy_synced_at", "2014-05-10 23:07:45.411893"], ["updated_at", "2014-05-10 23:07:45.413437"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'nick.mason@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'nick.mason@gmail.com' AND "users"."id" != 426) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 426  [["chimpy_synced_at", "2014-05-10 23:07:45.415235"], ["updated_at", "2014-05-10 23:07:45.415934"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 424]]
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'david.gilmour@gmail.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:07:45.420367"], ["email", "david.gilmour@gmail.com"], ["updated_at", "2014-05-10 23:07:45.420367"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'roger.waters@gmail.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-09 23:07:45.421722"], ["created_at", "2014-05-10 23:07:45.423020"], ["email", "roger.waters@gmail.com"], ["updated_at", "2014-05-07 23:07:45.421856"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'nick.mason@gmail.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-05 23:07:45.423974"], ["created_at", "2014-05-10 23:07:45.425064"], ["email", "nick.mason@gmail.com"], ["updated_at", "2014-05-09 23:07:45.424068"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'david.gilmour@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'david.gilmour@gmail.com' AND "users"."id" != 424) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424  [["chimpy_synced_at", "2014-05-10 23:07:45.452779"], ["updated_at", "2014-05-10 23:07:45.453888"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'nick.mason@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'nick.mason@gmail.com' AND "users"."id" != 426) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 426[0m  [["chimpy_synced_at", "2014-05-10 23:07:45.455363"], ["updated_at", "2014-05-10 23:07:45.456379"]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 426]]
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:45.460274"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:07:45.460274"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:07:45.461131"], ["created_at", "2014-05-10 23:07:45.462027"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:07:45.461221"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:07:45.462659"], ["created_at", "2014-05-10 23:07:45.463451"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:07:45.462731"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:45.467871"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:07:45.467871"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:07:45.469295"], ["created_at", "2014-05-10 23:07:45.470746"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:07:45.469424"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:07:45.471694"], ["created_at", "2014-05-10 23:07:45.472872"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:07:45.471788"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:45.476778"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:07:45.476778"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:07:45.477586"], ["created_at", "2014-05-10 23:07:45.478513"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:07:45.477668"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:07:45.479116"], ["created_at", "2014-05-10 23:07:45.480225"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:07:45.479186"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:45.483963"], ["email", "johnjohnson@gmail.com"], ["updated_at", "2014-05-10 23:07:45.483963"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:45.485212"], ["email", "donjohnson@gmail.com"], ["updated_at", "2014-05-10 23:07:45.485212"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'johnjohnson@gmail.com' AND "users"."id" != 424) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424[0m  [["chimpy_synced_at", "2014-05-10 23:07:45.511085"], ["updated_at", "2014-05-10 23:07:45.511727"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'donjohnson@gmail.com' AND "users"."id" != 425) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 425  [["chimpy_synced_at", "2014-05-10 23:07:45.512637"], ["updated_at", "2014-05-10 23:07:45.513234"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 424]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 425]]
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:45.518996"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:07:45.518996"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:07:45.520204"], ["created_at", "2014-05-10 23:07:45.521438"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:07:45.520332"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:07:45.522256"], ["created_at", "2014-05-10 23:07:45.523288"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:07:45.522348"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:45.527215"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:07:45.527215"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:07:45.528110"], ["created_at", "2014-05-10 23:07:45.529046"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:07:45.528201"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:07:45.529710"], ["created_at", "2014-05-10 23:07:45.530508"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:07:45.529782"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:45.533674"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:07:45.533674"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:07:45.534418"], ["created_at", "2014-05-10 23:07:45.535166"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:07:45.534491"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:07:45.535691"], ["created_at", "2014-05-10 23:07:45.536482"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:07:45.535749"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:45.540398"], ["email", "johnjohnson@gmail.com"], ["updated_at", "2014-05-10 23:07:45.540398"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:45.541638"], ["email", "donjohnson@gmail.com"], ["updated_at", "2014-05-10 23:07:45.541638"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'johnjohnson@gmail.com' AND "users"."id" != 424) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424[0m  [["chimpy_synced_at", "2014-05-10 23:07:45.570661"], ["updated_at", "2014-05-10 23:07:45.571405"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'donjohnson@gmail.com' AND "users"."id" != 425) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 425  [["chimpy_synced_at", "2014-05-10 23:07:45.572515"], ["updated_at", "2014-05-10 23:07:45.573163"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 424]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 425]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'david.gilmour@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:51.312935"], ["email", "david.gilmour@gmail.com"], ["updated_at", "2014-05-10 23:07:51.312935"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'roger.waters@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:07:51.316068"], ["created_at", "2014-05-10 23:07:51.317242"], ["email", "roger.waters@gmail.com"], ["updated_at", "2014-05-07 23:07:51.316259"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'nick.mason@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:07:51.317902"], ["created_at", "2014-05-10 23:07:51.318648"], ["email", "nick.mason@gmail.com"], ["updated_at", "2014-05-09 23:07:51.317999"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'david.gilmour@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'david.gilmour@gmail.com' AND "users"."id" != 424) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424[0m  [["chimpy_synced_at", "2014-05-10 23:07:51.360607"], ["updated_at", "2014-05-10 23:07:51.362228"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'nick.mason@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'nick.mason@gmail.com' AND "users"."id" != 426) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 426  [["chimpy_synced_at", "2014-05-10 23:07:51.364073"], ["updated_at", "2014-05-10 23:07:51.364773"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 424]]
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'david.gilmour@gmail.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:07:51.367719"], ["email", "david.gilmour@gmail.com"], ["updated_at", "2014-05-10 23:07:51.367719"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'roger.waters@gmail.com' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-09 23:07:51.368495"], ["created_at", "2014-05-10 23:07:51.369211"], ["email", "roger.waters@gmail.com"], ["updated_at", "2014-05-07 23:07:51.368577"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'nick.mason@gmail.com' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-05 23:07:51.369739"], ["created_at", "2014-05-10 23:07:51.370427"], ["email", "nick.mason@gmail.com"], ["updated_at", "2014-05-09 23:07:51.369827"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'david.gilmour@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'david.gilmour@gmail.com' AND "users"."id" != 424) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424  [["chimpy_synced_at", "2014-05-10 23:07:51.400360"], ["updated_at", "2014-05-10 23:07:51.401077"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'nick.mason@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'nick.mason@gmail.com' AND "users"."id" != 426) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 426[0m  [["chimpy_synced_at", "2014-05-10 23:07:51.402158"], ["updated_at", "2014-05-10 23:07:51.402979"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 426]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:51.406342"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:07:51.406342"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:07:51.407063"], ["created_at", "2014-05-10 23:07:51.407798"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:07:51.407140"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:07:51.408305"], ["created_at", "2014-05-10 23:07:51.408945"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:07:51.408365"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:51.411903"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:07:51.411903"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:07:51.412603"], ["created_at", "2014-05-10 23:07:51.413349"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:07:51.412676"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:07:51.413882"], ["created_at", "2014-05-10 23:07:51.414581"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:07:51.413941"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:51.418947"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:07:51.418947"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:07:51.419757"], ["created_at", "2014-05-10 23:07:51.420570"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:07:51.419840"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:07:51.421093"], ["created_at", "2014-05-10 23:07:51.421816"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:07:51.421158"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:51.425297"], ["email", "johnjohnson@gmail.com"], ["updated_at", "2014-05-10 23:07:51.425297"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:51.426614"], ["email", "donjohnson@gmail.com"], ["updated_at", "2014-05-10 23:07:51.426614"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'johnjohnson@gmail.com' AND "users"."id" != 424) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424[0m  [["chimpy_synced_at", "2014-05-10 23:07:51.454819"], ["updated_at", "2014-05-10 23:07:51.455473"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'donjohnson@gmail.com' AND "users"."id" != 425) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 425  [["chimpy_synced_at", "2014-05-10 23:07:51.456371"], ["updated_at", "2014-05-10 23:07:51.456962"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 424]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 425]]
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:51.462839"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:07:51.462839"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:07:51.464106"], ["created_at", "2014-05-10 23:07:51.465327"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:07:51.464250"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:07:51.466173"], ["created_at", "2014-05-10 23:07:51.467256"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:07:51.466269"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:51.471184"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:07:51.471184"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:07:51.472085"], ["created_at", "2014-05-10 23:07:51.473025"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:07:51.472176"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:07:51.473687"], ["created_at", "2014-05-10 23:07:51.474521"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:07:51.473762"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:51.477675"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:07:51.477675"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:07:51.478479"], ["created_at", "2014-05-10 23:07:51.479350"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:07:51.478578"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:07:51.479907"], ["created_at", "2014-05-10 23:07:51.481372"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:07:51.479976"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:51.485314"], ["email", "johnjohnson@gmail.com"], ["updated_at", "2014-05-10 23:07:51.485314"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:07:51.486650"], ["email", "donjohnson@gmail.com"], ["updated_at", "2014-05-10 23:07:51.486650"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'johnjohnson@gmail.com' AND "users"."id" != 424) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424[0m  [["chimpy_synced_at", "2014-05-10 23:07:51.514406"], ["updated_at", "2014-05-10 23:07:51.515228"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'donjohnson@gmail.com' AND "users"."id" != 425) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 425  [["chimpy_synced_at", "2014-05-10 23:07:51.516392"], ["updated_at", "2014-05-10 23:07:51.517073"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 424]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 425]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'david.gilmour@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:08:42.271757"], ["email", "david.gilmour@gmail.com"], ["updated_at", "2014-05-10 23:08:42.271757"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'roger.waters@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:08:42.276338"], ["created_at", "2014-05-10 23:08:42.278062"], ["email", "roger.waters@gmail.com"], ["updated_at", "2014-05-07 23:08:42.276518"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'nick.mason@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:08:42.279247"], ["created_at", "2014-05-10 23:08:42.280340"], ["email", "nick.mason@gmail.com"], ["updated_at", "2014-05-09 23:08:42.279360"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'david.gilmour@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'david.gilmour@gmail.com' AND "users"."id" != 424) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424[0m  [["chimpy_synced_at", "2014-05-10 23:08:42.323660"], ["updated_at", "2014-05-10 23:08:42.325080"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'nick.mason@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'nick.mason@gmail.com' AND "users"."id" != 426) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 426  [["chimpy_synced_at", "2014-05-10 23:08:42.326717"], ["updated_at", "2014-05-10 23:08:42.327388"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 424]]
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'david.gilmour@gmail.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:08:42.331567"], ["email", "david.gilmour@gmail.com"], ["updated_at", "2014-05-10 23:08:42.331567"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'roger.waters@gmail.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-09 23:08:42.332929"], ["created_at", "2014-05-10 23:08:42.334263"], ["email", "roger.waters@gmail.com"], ["updated_at", "2014-05-07 23:08:42.333068"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'nick.mason@gmail.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-05 23:08:42.335325"], ["created_at", "2014-05-10 23:08:42.336420"], ["email", "nick.mason@gmail.com"], ["updated_at", "2014-05-09 23:08:42.335426"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'david.gilmour@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'david.gilmour@gmail.com' AND "users"."id" != 424) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424  [["chimpy_synced_at", "2014-05-10 23:08:42.361054"], ["updated_at", "2014-05-10 23:08:42.361824"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'nick.mason@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'nick.mason@gmail.com' AND "users"."id" != 426) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 426[0m  [["chimpy_synced_at", "2014-05-10 23:08:42.362808"], ["updated_at", "2014-05-10 23:08:42.363411"]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 425]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'david.gilmour@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-10 23:08:42.366510"], ["email", "david.gilmour@gmail.com"], ["updated_at", "2014-05-10 23:08:42.366510"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'roger.waters@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-09 23:08:42.367329"], ["created_at", "2014-05-10 23:08:42.368115"], ["email", "roger.waters@gmail.com"], ["updated_at", "2014-05-07 23:08:42.367411"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'nick.mason@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)  [["chimpy_synced_at", "2014-05-05 23:08:42.368670"], ["created_at", "2014-05-10 23:08:42.369382"], ["email", "nick.mason@gmail.com"], ["updated_at", "2014-05-09 23:08:42.368729"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'david.gilmour@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'david.gilmour@gmail.com' AND "users"."id" != 424) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424[0m  [["chimpy_synced_at", "2014-05-10 23:08:42.399008"], ["updated_at", "2014-05-10 23:08:42.399774"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'nick.mason@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'nick.mason@gmail.com' AND "users"."id" != 426) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 426  [["chimpy_synced_at", "2014-05-10 23:08:42.401090"], ["updated_at", "2014-05-10 23:08:42.402290"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 426]]
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:08:42.406900"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:08:42.406900"]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-05 23:08:42.408005"], ["created_at", "2014-05-10 23:08:42.409442"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:08:42.408129"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-09 23:08:42.410256"], ["created_at", "2014-05-10 23:08:42.411183"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:08:42.410341"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:08:42.414625"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:08:42.414625"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-05 23:08:42.416066"], ["created_at", "2014-05-10 23:08:42.417070"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:08:42.416190"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-09 23:08:42.417753"], ["created_at", "2014-05-10 23:08:42.418568"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:08:42.417827"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:08:42.423267"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:08:42.423267"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-05 23:08:42.424485"], ["created_at", "2014-05-10 23:08:42.425700"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:08:42.424611"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-09 23:08:42.426843"], ["created_at", "2014-05-10 23:08:42.428029"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:08:42.426948"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:08:42.432527"], ["email", "johnjohnson@gmail.com"], ["updated_at", "2014-05-10 23:08:42.432527"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:08:42.434169"], ["email", "donjohnson@gmail.com"], ["updated_at", "2014-05-10 23:08:42.434169"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'johnjohnson@gmail.com' AND "users"."id" != 424) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424  [["chimpy_synced_at", "2014-05-10 23:08:42.462960"], ["updated_at", "2014-05-10 23:08:42.463870"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'donjohnson@gmail.com' AND "users"."id" != 425) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 425[0m  [["chimpy_synced_at", "2014-05-10 23:08:42.465102"], ["updated_at", "2014-05-10 23:08:42.465982"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 424]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 425]]
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:08:42.470749"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:08:42.470749"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-05 23:08:42.471694"], ["created_at", "2014-05-10 23:08:42.472652"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:08:42.471790"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-09 23:08:42.473325"], ["created_at", "2014-05-10 23:08:42.474147"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:08:42.473399"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:08:42.478453"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:08:42.478453"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-05 23:08:42.479838"], ["created_at", "2014-05-10 23:08:42.480663"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:08:42.479921"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-09 23:08:42.481304"], ["created_at", "2014-05-10 23:08:42.481986"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:08:42.481367"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test1@test.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:08:42.485315"], ["email", "test1@test.com"], ["updated_at", "2014-05-10 23:08:42.485315"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test2@test.com' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-05 23:08:42.486081"], ["created_at", "2014-05-10 23:08:42.486861"], ["email", "test2@test.com"], ["updated_at", "2014-05-09 23:08:42.486171"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test3@test.com' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("chimpy_synced_at", "created_at", "email", "updated_at") VALUES (?, ?, ?, ?)[0m  [["chimpy_synced_at", "2014-05-09 23:08:42.487402"], ["created_at", "2014-05-10 23:08:42.488093"], ["email", "test3@test.com"], ["updated_at", "2014-05-07 23:08:42.487462"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"  WHERE "users"."chimpy_synced_at" IS NULL
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"  WHERE (updated_at > chimpy_synced_at)[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:08:42.492348"], ["email", "johnjohnson@gmail.com"], ["updated_at", "2014-05-10 23:08:42.492348"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-10 23:08:42.493677"], ["email", "donjohnson@gmail.com"], ["updated_at", "2014-05-10 23:08:42.493677"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'johnjohnson@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'johnjohnson@gmail.com' AND "users"."id" != 424) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 424  [["chimpy_synced_at", "2014-05-10 23:08:42.517909"], ["updated_at", "2014-05-10 23:08:42.518668"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'donjohnson@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'donjohnson@gmail.com' AND "users"."id" != 425) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "users" SET "chimpy_synced_at" = ?, "updated_at" = ? WHERE "users"."id" = 425[0m  [["chimpy_synced_at", "2014-05-10 23:08:42.519605"], ["updated_at", "2014-05-10 23:08:42.520195"]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 424]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 425]]
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
