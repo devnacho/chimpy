@@ -7,6 +7,10 @@ module Chimpy
       @sync_model = Chimpy.configuration.model_to_sync
     end
 
+    def run
+      sync(users_to_sync)
+    end
+
     def users_to_sync
       never_synced = Object.const_get(@sync_model).where(chimpy_synced_at: nil)
       needing_sync = Object.const_get(@sync_model).where('updated_at > chimpy_synced_at')
