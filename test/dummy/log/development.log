@@ -82,3 +82,4 @@ Migrating to CreateUsers (20140509170116)
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
