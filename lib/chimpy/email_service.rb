@@ -10,9 +10,11 @@ module Chimpy
     end
 
     def sync(users)
-      struct = users.map{|user| {email: {email: user.email}}}
+      struct = users.map { |user| { email: { email: user.email } } }
       response = mailchimp.lists.batch_subscribe(id: ENV['MAILCHIMP_LIST_ID'],
-                                        batch: struct, update_existing: true, double_optin: false)
+                                                 batch: struct,
+                                                 update_existing: true,
+                                                 double_optin: false)
       synced_users(response)
     end
 
@@ -20,12 +22,12 @@ module Chimpy
 
     def synced_users(response)
       users = []
-      response["adds"].each do |add|
-        users << sync_class.find_by_email(add["email"])
+      response['adds'].each do |add|
+        users << sync_class.find_by_email(add['email'])
       end
 
-      response["updates"].each do |update|
-        users << sync_class.find_by_email(update["email"])
+      response['updates'].each do |update|
+        users << sync_class.find_by_email(update['email'])
       end
       users
     end
