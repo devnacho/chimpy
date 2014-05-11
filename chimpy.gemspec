@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'chimpy/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "Chimpy"
+  spec.name          = "chimpy"
   spec.version       = Chimpy::VERSION
   spec.authors       = ["Ignacio Gutierrez"]
   spec.email         = ["nachojgutierrez@gmail.com"]
