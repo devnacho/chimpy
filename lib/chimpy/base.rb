@@ -12,14 +12,14 @@ module Chimpy
     end
 
     def users_to_sync
-      never_synced = @sync_class.where(chimpy_synced_at: nil)
-      needing_sync = @sync_class.where('updated_at > chimpy_synced_at')
+      never_synced = sync_class.where(chimpy_synced_at: nil)
+      needing_sync = sync_class.where('updated_at > chimpy_synced_at')
       never_synced + needing_sync
     end
 
     def sync(users)
       struct = users.map{|user| {email: {email: user.email}}}
-      response = @mailchimp.lists.batch_subscribe(id: ENV['MAILCHIMP_LIST_ID'],
+      response = mailchimp.lists.batch_subscribe(id: ENV['MAILCHIMP_LIST_ID'],
                                         batch: struct, update_existing: true, double_optin: false)
       mark_synced_users(response)
     end
@@ -29,13 +29,13 @@ module Chimpy
     def mark_synced_users(response)
       synced_users = []
       response["adds"].each do |add|
-        user = @sync_class.find_by_email(add["email"])
+        user = sync_class.find_by_email(add["email"])
         user.update(chimpy_synced_at: Time.now)
         synced_users << user
       end
 
       response["updates"].each do |update|
-        user = @sync_class.find_by_email(update["email"])
+        user = sync_class.find_by_email(update["email"])
         user.update(chimpy_synced_at: Time.now)
         synced_users << user
       end

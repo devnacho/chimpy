@@ -16,3 +16,5 @@ test/tmp
 test/version_tmp
 tmp
 .env
+.DS_Store
+test/dummy/log/
