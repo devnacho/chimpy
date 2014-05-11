@@ -2,11 +2,10 @@ require 'gibbon'
 
 module Chimpy
   class EmailService
-    attr_reader :mailchimp, :sync_class, :configuration
+    attr_reader :mailchimp, :configuration
 
     def initialize
       @mailchimp = create_mailchimp_client
-      @sync_class = Chimpy.configuration.sync_class
     end
 
     def sync(users)
