@@ -30,7 +30,7 @@ describe Chimpy::Base do
       @already_synced.chimpy_synced_at.must_equal  @already_synced.reload.chimpy_synced_at
     end
   end
-
+=begin
   describe "users" do
     before do
       @never_synced = User.create(email: "test1@test.com")
@@ -69,5 +69,7 @@ describe Chimpy::Base do
       end
     end
   end
+=end
+
 end
 

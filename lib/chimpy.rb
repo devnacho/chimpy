@@ -1,7 +1,8 @@
 require "chimpy/version"
 require "chimpy/configuration"
 require "chimpy/base"
-require 'gibbon'
+require "chimpy/user_manager"
+require "chimpy/email_service"
 
 module Chimpy
 
