@@ -18,7 +18,7 @@ describe Chimpy::Base do
     it "syncs users to a list" do
       VCR.use_cassette('succesful_list_subscription') do
         synced_users = Chimpy::EmailService.new.sync(@users)
-        synced_users.must_equal @users
+        synced_users.must_equal @users.map { |user| user.email }
       end
     end
   end

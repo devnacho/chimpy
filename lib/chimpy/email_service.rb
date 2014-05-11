@@ -21,15 +21,15 @@ module Chimpy
     private
 
     def synced_users(response)
-      users = []
+      emails = []
       response['adds'].each do |add|
-        users << sync_class.find_by_email(add['email'])
+        emails << add['email']
       end
 
       response['updates'].each do |update|
-        users << sync_class.find_by_email(update['email'])
+        emails << update['email']
       end
-      users
+      emails
     end
 
     def create_mailchimp_client
