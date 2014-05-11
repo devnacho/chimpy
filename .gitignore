@@ -18,3 +18,4 @@ tmp
 .env
 .DS_Store
 test/dummy/log/
+test/dummy/log/development.log
