@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140509170116) do
+ActiveRecord::Schema.define(version: 20140513022907) do
 
   create_table "users", force: true do |t|
     t.string   "email"
-    t.datetime "chimpy_synced_at"
     t.integer  "chimpy_mc_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "chimpy_synced_at"
   end
 
 end

@@ -1,0 +1,5 @@
+class AddChimpyTo<%= @sync_class.to_s.pluralize %> < ActiveRecord::Migration
+  def change
+    add_column :<%= @sync_class.parameterize.underscore.pluralize.to_sym %>, :chimpy_synced_at, :datetime
+  end
+end

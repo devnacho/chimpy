@@ -3,7 +3,8 @@ require 'chimpy/configuration'
 require 'chimpy/base'
 require 'chimpy/user_manager'
 require 'chimpy/email_service'
-require 'chimpy/task' if defined?(Rails)
+require 'chimpy/railtie' if defined?(Rails)
+
 
 module Chimpy
   class << self
