@@ -22,11 +22,11 @@ end
 ```
 Run Chimpy Generator
 
-$ rails g chimpy:migrate
+    $ rails g chimpy:migrate
 
 After that execute the generated migration
 
-$ rake db:migrate
+    $ rake db:migrate
 
 Add these environment variables to your application
 
