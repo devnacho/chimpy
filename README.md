@@ -26,7 +26,7 @@ Run Chimpy Generator
 
 After that execute the generated migration
 
-    $ rake db:migrate
+    $ rake db:migration
 
 Add these environment variables to your application
 
@@ -37,7 +37,7 @@ Add these environment variables to your application
 
 To sync your users just run the following rake task. It is recommended to run it frequently with a cron or schedule it with Heroku Scheduler.
 
-$ rake chimpy:sync
+    $ rake chimpy:sync
 
 ## Contributing
 
