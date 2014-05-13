@@ -8,23 +8,36 @@ Add this line to your application's Gemfile:
 
     gem 'chimpy'
 
-And then execute:
+Then execute:
 
     $ bundle
 
-TODO: Run migration to add columns to users
+Set in your config/environment.rb (or in each environment file) the details for the class you would like to sync with MailChimp. It defaults to User
 
-TODO: Add your Mailchimp api keys
+``` ruby
+Chimpy.configure do |config|
+  config.sync_class = User
+end
+
+```
+Run Chimpy Generator
+
+$ rails g chimpy:migrate
+
+After that execute the generated migration
+
+$ rake db:migrate
+
+Add these environment variables to your application
 
     MAILCHIMP_API_KEY=
-
-Or install it yourself as:
-
-    $ gem install chimpy
+    MAILCHIMP_LIST_ID=
 
 ## Usage
 
-TODO: Write usage instructions here
+To sync your users just run the following rake task. It is recommended to run it frequently with a cron or schedule it with Heroku Scheduler.
+
+$ rake chimpy:sync
 
 ## Contributing
 
