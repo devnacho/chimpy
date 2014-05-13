@@ -10,7 +10,7 @@ describe Chimpy::Base do
 
   describe "Email Service" do
     before do
-      @user1 = User.create(email: "johnjohnson@gmail.com")
+      @user1 = User.create(email: "johndonson@gmail.com")
       @user2 = User.create(email: "donjohnson@gmail.com")
       @users = [@user1, @user2]
     end

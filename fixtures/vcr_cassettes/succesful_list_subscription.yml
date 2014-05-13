@@ -5,7 +5,7 @@ http_interactions:
     uri: https://us8.api.mailchimp.com/2.0/lists/batch-subscribe
     body:
       encoding: UTF-8
-      string: '{"apikey":"549391d6ed3fc64fd42e4b5cf83ceba9-us8","id":"788e29440b","batch":[{"email":{"email":"johnjohnson@gmail.com"}},{"email":{"email":"donjohnson@gmail.com"}}],"update_existing":true,"double_optin":false}'
+      string: '{"apikey":"549391d6ed3fc64fd42e4b5cf83ceba9-us8","id":"788e29440b","batch":[{"email":{"email":"johndonson@gmail.com"}},{"email":{"email":"donjohnson@gmail.com"}}],"update_existing":true,"double_optin":false}'
     headers: {}
   response:
     status:
@@ -28,7 +28,7 @@ http_interactions:
       - _AVESTA_ENVIRONMENT=prod; path=/
     body:
       encoding: UTF-8
-      string: '{"add_count":2,"adds":[{"email":"johnjohnson@gmail.com","euid":"d4c1408824","leid":"151330921"},{"email":"donjohnson@gmail.com","euid":"7f18d87748","leid":"151330925"}],"update_count":0,"updates":[],"error_count":0,"errors":[]}'
+      string: '{"add_count":2,"adds":[{"email":"johndonson@gmail.com","euid":"d4c1408824","leid":"151330921"},{"email":"donjohnson@gmail.com","euid":"7f18d87748","leid":"151330925"}],"update_count":0,"updates":[],"error_count":0,"errors":[]}'
     http_version: 
   recorded_at: Fri, 09 May 2014 21:17:33 GMT
 recorded_with: VCR 2.8.0
