@@ -12,11 +12,15 @@ Then execute:
 
     $ bundle
 
-Set in your config/environment.rb (or in each environment file) the details for the class you would like to sync with MailChimp. It defaults to User
+Create an initializer with the details for the class you would like to sync with MailChimp and your mailchimp keys. It defaults to User
 
 ``` ruby
+#initializers/chimpy.rb
+
 Chimpy.configure do |config|
   config.sync_class = User
+  config.mailchimp_api_key = "549391d6ed3fc64fd42e4b5cf83ceba9-us8"
+  config.mailchimp_list_id = "788e29440b"
 end
 
 ```
@@ -27,11 +31,6 @@ Run Chimpy Generator
 After that execute the generated migration
 
     $ rake db:migration
-
-Add these environment variables to your application
-
-    MAILCHIMP_API_KEY=
-    MAILCHIMP_LIST_ID=
 
 ## Usage
 
