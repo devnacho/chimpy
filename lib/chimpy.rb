@@ -7,8 +7,9 @@ require 'chimpy/railtie' if defined?(Rails)
 
 
 module Chimpy
-  class << self
-    attr_accessor :configuration
+
+  def self.run
+    Base.run
   end
 
   def self.configuration

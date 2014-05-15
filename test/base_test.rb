@@ -16,7 +16,7 @@ describe Chimpy::Base do
       @already_synced = User.create(email: "roger.waters@gmail.com", chimpy_synced_at: 1.day.ago, updated_at: 3.days.ago)
       @to_sync = User.create(email: "nick.mason@gmail.com", chimpy_synced_at: 5.days.ago, updated_at: 1.day.ago)
       VCR.use_cassette('run') do
-        Chimpy::Base.new.run
+        Chimpy.run
       end
     end
 
