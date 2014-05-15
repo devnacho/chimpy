@@ -14,7 +14,8 @@ module Chimpy
 
     def mark_as_synced(emails)
       emails.each do |email|
-        sync_class.find_by_email(email).update(chimpy_synced_at: Time.now)
+        found = sync_class.find_by_email(email)
+        found.update(chimpy_synced_at: Time.now) if found
       end
     end
   end
