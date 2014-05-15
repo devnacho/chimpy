@@ -5,8 +5,8 @@ describe Chimpy::Base do
   before do
     Chimpy.configure do |config|
       config.sync_class = User
-      config.mailchimp_api_key = "insert-mailchimp-api-key"
-      config.mailchimp_list_id = "insert-mailchimp-list-id"
+      config.mailchimp_api_key = "549391d6ed3fc64fd42e4b5cf83ceba9-us8"
+      config.mailchimp_list_id = "788e29440b"
     end
   end
 

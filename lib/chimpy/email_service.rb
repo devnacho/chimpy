@@ -2,15 +2,17 @@ require 'gibbon'
 
 module Chimpy
   class EmailService
-    attr_reader :mailchimp, :configuration
+    attr_reader :mailchimp, :mailchimp_api_key, :mailchimp_list_id
 
     def initialize
+      @mailchimp_api_key = Chimpy.configuration.mailchimp_api_key
+      @mailchimp_list_id = Chimpy.configuration.mailchimp_list_id
       @mailchimp = create_mailchimp_client
     end
 
     def sync(users)
       struct = users.map { |user| { email: { email: user.email } } }
-      response = mailchimp.lists.batch_subscribe(id: ENV['MAILCHIMP_LIST_ID'],
+      response = mailchimp.lists.batch_subscribe(id: mailchimp_list_id,
                                                  batch: struct,
                                                  update_existing: true,
                                                  double_optin: false)
@@ -32,7 +34,7 @@ module Chimpy
     end
 
     def create_mailchimp_client
-      Gibbon::API.new(ENV['MAILCHIMP_API_KEY'])
+      Gibbon::API.new(mailchimp_api_key)
     end
   end
 end
