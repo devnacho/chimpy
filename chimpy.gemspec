@@ -6,8 +6,8 @@ require 'chimpy/version'
 Gem::Specification.new do |spec|
   spec.name          = "chimpy"
   spec.version       = Chimpy::VERSION
-  spec.authors       = ["Ignacio Gutierrez"]
-  spec.email         = ["nachojgutierrez@gmail.com"]
+  spec.authors       = ["Ignacio Gutierrez", "Justin McNally"]
+  spec.email         = ["nachojgutierrez@gmail.com", "justin@kohactive.com"]
   spec.summary       = %q{Chimpy syncs your users from your DB to your respective lists in MailChimp.}
   spec.description   = %q{Chimpy syncs your users from your DB to your respective lists in MailChimp.}
   spec.homepage      = ""
@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency'gibbon', '>= 1.1.2'
+  spec.add_dependency 'gibbon', '~> 1.1.2'
   spec.add_dependency 'railties', '>= 3.0.0'
   spec.add_dependency 'activerecord', '>= 3.0.0'
 

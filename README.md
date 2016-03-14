@@ -18,7 +18,7 @@ Create an initializer with the details for the class you would like to sync with
 #initializers/chimpy.rb
 
 Chimpy.configure do |config|
-  config.sync_class = User
+  config.sync_class = :user
   config.mailchimp_api_key = "549391d6ed3fc64fd42e4b5cf83ceba9-us8"
   config.mailchimp_list_id = "788e29440b"
 end

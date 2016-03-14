@@ -1,9 +1,12 @@
 module Chimpy
   class UserManager
-    attr_reader :sync_class
 
     def initialize
-      @sync_class = Chimpy.configuration.sync_class
+
+    end
+
+    def sync_class
+      Chimpy.configuration.sync_class.to_s.classify.constantize
     end
 
     def to_sync
