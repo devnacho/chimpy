@@ -1,10 +1,10 @@
 require 'chimpy/version'
 require 'chimpy/configuration'
+require 'chimpy/sync'
 require 'chimpy/base'
 require 'chimpy/user_manager'
 require 'chimpy/email_service'
 require 'chimpy/railtie' if defined?(Rails)
-
 
 module Chimpy
 
