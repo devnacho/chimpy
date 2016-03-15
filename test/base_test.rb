@@ -4,18 +4,16 @@ describe Chimpy::Base do
 
   before do
     Chimpy.configure do |config|
-      config.sync_class = User
-      config.mailchimp_api_key = "549391d6ed3fc64fd42e4b5cf83ceba9-us8"
-      config.mailchimp_list_id = "788e29440b"
+      config.sync_class = :user
     end
   end
 
   describe "run" do
     before do
-      @new_user = User.create(email: "david.gilmour@gmail.com")
-      @already_synced = User.create(email: "roger.waters@gmail.com", chimpy_synced_at: 1.day.ago, updated_at: 3.days.ago)
-      @to_sync = User.create(email: "nick.mason@gmail.com", chimpy_synced_at: 5.days.ago, updated_at: 1.day.ago)
-      VCR.use_cassette('run') do
+      @new_user = User.create(email: "david.gilmour@gmail.com", skip_mailchimp_sync: true)
+      @already_synced = User.create(email: "roger.waters@gmail.com", chimpy_synced_at: 1.day.ago, updated_at: 3.days.ago, skip_mailchimp_sync: true)
+      @to_sync = User.create(email: "nick.mason@gmail.com", chimpy_synced_at: 5.days.ago, updated_at: 1.day.ago, skip_mailchimp_sync: true)
+      VCR.use_cassette('run', :record => :once) do
         Chimpy.run
       end
     end
@@ -33,4 +31,3 @@ describe Chimpy::Base do
     end
   end
 end
-

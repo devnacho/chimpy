@@ -11,6 +11,8 @@ Dotenv.load
 # Configure Rails Environment
 ENV["RAILS_ENV"] = "test"
 
+ENV["MAILCHIMP_API_KEY"] = "abc-us11"
+ENV["MAILCHIMP_LIST_ID"] = "123"
 
 VCR.configure do |c|
   c.cassette_library_dir = 'fixtures/vcr_cassettes'
@@ -40,5 +42,3 @@ Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 if ActiveSupport::TestCase.method_defined?(:fixture_path=)
   ActiveSupport::TestCase.fixture_path = File.expand_path("../fixtures", __FILE__)
 end
-
-
