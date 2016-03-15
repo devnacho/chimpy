@@ -10,9 +10,9 @@ describe Chimpy::UserManager do
 
   describe "User Manager" do
     before do
-      @never_synced = User.create(email: "test1@test.com")
-      @to_sync = User.create(email: "test2@test.com", chimpy_synced_at: 5.days.ago, updated_at: 1.day.ago)
-      @synced = User.create(email: "test3@test.com", chimpy_synced_at: 1.day.ago, updated_at: 3.day.ago)
+      @never_synced = User.create(email: "test1@test.com", skip_mailchimp_sync: true)
+      @to_sync = User.create(email: "test2@test.com", chimpy_synced_at: 5.days.ago, updated_at: 1.day.ago, skip_mailchimp_sync: true)
+      @synced = User.create(email: "test3@test.com", chimpy_synced_at: 1.day.ago, updated_at: 3.day.ago, skip_mailchimp_sync: true)
     end
 
     it "gets users who have not been synced yet" do
